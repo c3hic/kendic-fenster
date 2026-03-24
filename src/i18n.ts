@@ -6,7 +6,7 @@ const resources = {
   bs: {
     translation: {
       nav: { home: 'Početna', services: 'Usluge', gallery: 'Partneri', contact: 'Kontakt' },
-      hero: { title: 'Preciznost koja pravi razliku', subtitle: 'Vrhunska usluga rezanja i kantiranja iverice po meri, uz širok asortiman okova za vaš savršen enterijer.', btnServices: 'Naše Usluge', btnContact: 'Kontaktirajte Nas' },
+      hero: { title: 'Preciznost koja pravi razliku', subtitle: 'Vrhunska usluga rezanja i kantiranja iverice po mjeri, uz širok asortiman okova za vaš savršen enterijer.', btnServices: 'Naše Usluge', btnContact: 'Kontaktirajte Nas' },
       promo: { 
         title: 'PROMO SEDMICA', 
         text: 'Besplatno kantiranje za sve narudžbe pločastih materijala preko 500 KM! Akcija traje do isteka zaliha.',
