@@ -1,8 +1,6 @@
 backend:
-  name: github
-  repo: c3hic/kendic-fenster # Tvoj GitHub repozitorijum
+  name: git-gateway
   branch: main
-  base_url: https://api.github.com
 
 media_folder: "public/assets/promo"
 public_folder: "/assets/promo"
