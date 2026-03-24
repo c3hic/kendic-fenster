@@ -1,8 +1,5 @@
 backend:
-  name: git-gateway # Promenjeno sa test-repo na git-gateway za Netlify
-  branch: main # Ili kako god da vam se zove glavna grana na GitHub-u
-
-local_backend: true # Dozvoljava proxy serveru da radi lokalno
+  name: test-repo
 
 media_folder: "public/assets/promo"
 public_folder: "/assets/promo"
@@ -16,7 +13,7 @@ collections:
         file: "src/data/promo.json"
         fields:
           - {label: "Aktivna (Prikaži na sajtu)", name: "active", widget: "boolean", default: true}
-          - {label: "Tekst Akcije", name: "text", widget: "text", default: "Besplatno kantiranje za sve narudžbe pločastih materijala preko 500 KM!"}
+          - {label: "Tekst Akcije", name: "text", widget: "text", default: "Naručite danas, preuzmite za 24h!"}
           - {label: "Slika Akcije", name: "image", widget: "image", required: false}
 
   - name: "gallery"
