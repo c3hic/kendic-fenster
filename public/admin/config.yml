@@ -1,6 +1,7 @@
 backend:
   name: git-gateway
   branch: main
+  accept_roles: ["admin", "editor"] # Dozvoljava pristup samo ovim ulogama
 
 media_folder: "public/assets/promo"
 public_folder: "/assets/promo"
