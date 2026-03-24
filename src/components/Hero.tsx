@@ -1,17 +1,26 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
-import heroBg from '../assets/images/slika1.jpg';
 import promoData from '../data/promo.json';
+import galleryData from '../data/gallery.json';
 import { Tag } from 'lucide-react';
+import defaultBg from '../assets/images/slika1.jpg';
 
 const Hero: React.FC = () => {
   const { t } = useTranslation();
 
-  // Ako radnik postavi sliku u CMS-u, koristimo je, inače ne prikazujemo sliku u promo kartici
+  const heroBg = useMemo(() => {
+    const images = galleryData.images || [];
+    if (images.length === 0) return defaultBg;
+    const today = new Date();
+    const dayIndex = today.getDate() + today.getMonth() * 31 + today.getFullYear();
+    const imageIndex = dayIndex % images.length;
+    return images[imageIndex];
+  }, []);
+
   const hasPromoImage = promoData.image && promoData.image !== "";
 
   return (
-    <section id="home" style={{
+    <section id="home" className="hero-section" style={{
       minHeight: '100vh',
       display: 'flex',
       alignItems: 'center',
@@ -23,8 +32,7 @@ const Hero: React.FC = () => {
       backgroundColor: '#2c3e50',
       color: 'white',
       textAlign: 'center',
-      width: '100%',
-      padding: '120px 0 60px'
+      padding: '120px 20px 60px'
     }}>
       <div className="container" style={{
         display: 'flex',
@@ -45,7 +53,6 @@ const Hero: React.FC = () => {
           </div>
         </div>
 
-        {/* Promo Card - Upravlja se preko /admin panela */}
         {promoData.active && (
           <div className="promo-card" style={{
             backgroundColor: 'rgba(255, 255, 255, 0.1)',

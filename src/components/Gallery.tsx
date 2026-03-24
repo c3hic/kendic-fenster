@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import galleryData from '../data/gallery.json';
+import { X, Image as ImageIcon } from 'lucide-react';
 
 const LogoEgger = () => (
   <svg viewBox="0 0 400 100" style={{ width: '100%', height: '100%' }}>
@@ -33,6 +34,7 @@ const LogoFalco = () => (
 
 const Gallery: React.FC = () => {
   const { t } = useTranslation();
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const brands = [
     { 
@@ -57,14 +59,16 @@ const Gallery: React.FC = () => {
     }
   ];
 
-  const projectImages = galleryData.images || [];
+  const allImages = [...(galleryData.images || [])].reverse();
+  const displayedImages = allImages.slice(0, 6);
 
   return (
     <section id="gallery" style={{ backgroundColor: '#fff' }}>
-      <h2 style={{ textAlign: 'center', fontSize: '2.5rem', marginBottom: '20px' }}>{t('gallery.title')}</h2>
-      <p style={{ textAlign: 'center', color: '#666', marginBottom: '10px', maxWidth: '600px', margin: '0 auto' }}>
-        {t('gallery.subtitle')}
-      </p>
+      <div className="container">
+        <h2 style={{ textAlign: 'center', fontSize: '2.5rem', marginBottom: '20px' }}>{t('gallery.title')}</h2>
+        <p style={{ textAlign: 'center', color: '#666', marginBottom: '10px', maxWidth: '600px', margin: '0 auto' }}>
+          {t('gallery.subtitle')}
+        </p>
       <p style={{ textAlign: 'center', color: '#e67e22', fontWeight: 600, fontSize: '0.9rem', marginBottom: '50px' }}>
         {t('gallery.clickHint')}
       </p>
@@ -114,7 +118,7 @@ const Gallery: React.FC = () => {
         gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', 
         gap: '20px' 
       }}>
-        {projectImages.map((img, i) => (
+        {displayedImages.map((img, i) => (
           <div key={i} style={{ 
             height: '350px', 
             borderRadius: '10px',
@@ -129,6 +133,77 @@ const Gallery: React.FC = () => {
           onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
           ></div>
         ))}
+      </div>
+
+      {allImages.length > 6 && (
+        <div style={{ textAlign: 'center', marginTop: '40px' }}>
+          <button 
+            onClick={() => setIsModalOpen(true)}
+            className="btn"
+            style={{ 
+              backgroundColor: 'transparent', 
+              color: '#2c3e50', 
+              border: '2px solid #2c3e50',
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '10px'
+            }}
+          >
+            <ImageIcon size={20} />
+            Pogledaj sve radove ({allImages.length})
+          </button>
+        </div>
+      )}
+
+      {isModalOpen && (
+        <div style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          backgroundColor: 'rgba(0,0,0,0.95)',
+          zIndex: 9999,
+          overflowY: 'auto',
+          padding: '40px 20px'
+        }}>
+          <button 
+            onClick={() => setIsModalOpen(false)}
+            style={{
+              position: 'fixed',
+              top: '20px',
+              right: '20px',
+              background: 'none',
+              border: 'none',
+              color: 'white',
+              cursor: 'pointer',
+              zIndex: 10000
+            }}
+          >
+            <X size={40} />
+          </button>
+
+          <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+            <h2 style={{ color: 'white', textAlign: 'center', marginBottom: '40px' }}>Svi Radovi</h2>
+            <div style={{ 
+              display: 'grid', 
+              gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', 
+              gap: '20px' 
+            }}>
+              {allImages.map((img, i) => (
+                <div key={i} style={{ 
+                  height: '300px', 
+                  borderRadius: '10px',
+                  backgroundImage: `url("${img}")`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  boxShadow: '0 5px 15px rgba(255,255,255,0.1)'
+                }}></div>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
       </div>
     </section>
   );
