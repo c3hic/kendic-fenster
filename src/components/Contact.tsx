@@ -81,8 +81,8 @@ const Contact: React.FC = () => {
               <Clock style={{ color: '#e67e22' }} />
               <div>
                 <strong>{t('contact.hours')}:</strong><br />
-                Pon - Pet: 08:00 - 17:00<br />
-                Subota: 08:00 - 14:00
+                Pon - Pet: 08:00 - 16:00<br />
+                Subota i Nedjelja: Neradni
               </div>
             </div>
           </div>

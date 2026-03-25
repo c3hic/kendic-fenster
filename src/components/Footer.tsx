@@ -49,7 +49,7 @@ const Footer: React.FC = () => {
           {/* Kolona 2: Brzi Linkovi */}
           <div className="footer-col">
             <h3 style={{ color: 'white', marginBottom: '20px', fontSize: '1.2rem' }}>Brzi Linkovi</h3>
-            <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '10px' }}>
+            <ul className="footer-links-list" style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '10px' }}>
               <li><a href="#home" className="footer-link">{t('nav.home')}</a></li>
               <li><a href="#services" className="footer-link">{t('nav.services')}</a></li>
               <li><a href="#gallery" className="footer-link">{t('nav.gallery')}</a></li>
@@ -75,13 +75,13 @@ const Footer: React.FC = () => {
               </li>
               <li style={{ display: 'flex', gap: '10px', alignItems: 'flex-start' }}>
                 <Clock size={18} color="#e67e22" style={{ marginTop: '3px' }} />
-                <span>Pon - Pet: 08:00 - 17:00<br/>Sub: 08:00 - 14:00</span>
+                <span>Pon - Pet: 08:00 - 16:00<br/>Subota i Nedjelja: Neradni</span>
               </li>
             </ul>
           </div>
         </div>
 
-        <div style={{ 
+        <div className="footer-bottom" style={{ 
           borderTop: '1px solid rgba(255,255,255,0.1)', 
           marginTop: '40px', 
           paddingTop: '20px', 
@@ -125,6 +125,16 @@ const Footer: React.FC = () => {
             display: flex;
             flex-direction: column;
             align-items: center;
+          }
+          .footer-links-list {
+            flex-direction: row !important;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px !important;
+          }
+          .footer-bottom {
+            justify-content: center !important;
+            text-align: center;
           }
         }
       `}</style>

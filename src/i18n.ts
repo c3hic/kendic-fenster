@@ -12,11 +12,18 @@ const resources = {
         text: 'Besplatno kantiranje za sve narudžbe pločastih materijala preko 500 KM! Akcija traje do isteka zaliha.',
         btn: 'Iskoristi Akciju'
       },
-      services: { title: 'Naše Usluge', cutting: 'Precizno Rezanje', cuttingDesc: 'Savremeno rezanje iverice na najsavremenijim mašinama po vašim tačnim merama.', edging: 'Kantiranje', edgingDesc: 'Kvalitetno kantiranje ABS i PVC trakama za dugovečnost i estetski savršen finiš.', fittings: 'Prodaja Okova', fittingsDesc: 'Širok izbor šarki, klizača, ručica i ostalih komponenti vrhunskih brendova.' },
+      services: { title: 'Naše Usluge', cutting: 'Precizno Rezanje', cuttingDesc: 'Savremeno rezanje iverice na najsavremenijim mašinama po vašim tačnim mjerama.', edging: 'Kantiranje', edgingDesc: 'Kvalitetno kantiranje ABS i PVC trakama za dugovječnost i estetski savršen finiš.', fittings: 'Prodaja Okova', fittingsDesc: 'Širok izbor šarki, klizača, ručica i ostalih komponenti vrhunskih brendova.' },
       gallery: { 
         title: 'Naši Partneri', 
-        subtitle: 'Sarađujemo sa vodećim svetskim proizvođačima pločastih materijala i okova.',
+        subtitle: 'Sarađujemo sa vodećim svjetskim proizvođačima pločastih materijala i okova.',
         clickHint: 'Kliknite na logo za pregled kataloga'
+      },
+      catalogs: {
+        title: 'Katalozi Partnera',
+        subtitle: 'Prelistajte online kataloge naših partnera i pronađite idealan materijal za vaš dom ili poslovni prostor.',
+        viewEgger: 'EGGER Kolekcija',
+        viewKastamonu: 'KASTAMONU Program',
+        btnView: 'Pogledaj Katalog'
       },
       contact: { 
         title: 'Kontaktirajte Nas', 
@@ -26,12 +33,12 @@ const resources = {
         address: 'Adresa', 
         phone: 'Telefon', 
         email: 'Email', 
-        hours: 'Radno vreme', 
+        hours: 'Radno vrijeme', 
         name: 'Vaše Ime', 
         subject: 'Tema', 
         message: 'Vaša Poruka', 
         send: 'Pošaljite Poruku',
-        success: 'Hvala vam! Vaša poruka je uspešno poslata.',
+        success: 'Hvala vam! Vaša poruka je uspješno poslana.',
         error: 'Došlo je do greške. Molimo pokušajte ponovo.'
       }
     }
@@ -78,7 +85,7 @@ const resources = {
         text: 'Kostenlose Bekantung für alle Bestellungen von Plattenmaterialien über 500 KM! Aktion gültig solange der Vorrat reicht.',
         btn: 'Angebot Nutzen'
       },
-      services: { title: 'Unsere Leistungen', cutting: 'Präziser Zuschnitt', cuttingDesc: 'Moderner Zuschnitt von Spanplatten auf modernsten Maschinen nach Ihren genauen Maßen.', edging: 'Bekantung', edgingDesc: 'Hochwertige Bekantung mit ABS- und PVC-Bändern für Langlebigkeit und ein ästhetisch perfektes Finish.', fittings: 'Beschlagverkauf', fittingsDesc: 'Große Auswahl an Scharnieren, Auszügen, Griffen und anderen Komponenten führender Marken.' },
+      services: { title: 'Unsere Leistungen', cutting: 'Präziser Zuschnitt', cuttingDesc: 'Moderner Zuschnitt von Spanplatten na modernsten Maschinen nach Ihren genauen Maßen.', edging: 'Bekantung', edgingDesc: 'Hochwertige Bekantung mit ABS- und PVC-Bändern für Langlebigkeit und ein ästhetisch perfektes Finish.', fittings: 'Beschlagverkauf', fittingsDesc: 'Große Auswahl an Scharnieren, Auszügen, Griffen und anderen Komponenten führender Marken.' },
       gallery: { 
         title: 'Unsere Partner', 
         subtitle: 'Wir arbeiten mit weltweit führenden Herstellern von Plattenmaterialien und Beschlägen zusammen.',
@@ -95,10 +102,10 @@ const resources = {
         hours: 'Öffnungszeiten', 
         name: 'Ihr Name', 
         subject: 'Betreff', 
-        message: 'Ihre Nachricht', 
+        message: 'Ihr Nachricht', 
         send: 'Nachricht Senden',
         success: 'Vielen Dank! Ihre Nachricht wurde erfolgreich gesendet.',
-        error: 'Es ist unvorhergesehener Fehler aufgetreten. Bitte versuchen Sie es erneut.'
+        error: 'Es ist unvorhergesehener Fehler opgetreten. Bitte versuchen Sie es erneut.'
       }
     }
   },
