@@ -1,9 +1,12 @@
-import React from 'react';
 import { Facebook, MapPin, Phone, Mail, Clock } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import logoImg from '../assets/images/logo.png';
 
-const Footer: React.FC = () => {
+interface FooterProps {
+  onCareerClick: () => void;
+}
+
+const Footer: React.FC<FooterProps> = ({ onCareerClick }) => {
   const { t } = useTranslation();
 
   return (
@@ -54,6 +57,7 @@ const Footer: React.FC = () => {
               <li><a href="#services" className="footer-link">{t('nav.services')}</a></li>
               <li><a href="#gallery" className="footer-link">{t('nav.gallery')}</a></li>
               <li><a href="#contact" className="footer-link">{t('nav.contact')}</a></li>
+              <li><button onClick={onCareerClick} className="footer-link" style={{ background: 'transparent', border: 'none', cursor: 'pointer', fontSize: 'inherit', fontFamily: 'inherit', textAlign: 'left' }}>Postani dio tima</button></li>
             </ul>
           </div>
 

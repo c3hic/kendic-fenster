@@ -1,9 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Menu, X, Facebook } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import logoImg from '../assets/images/logo.png';
 
-const Navbar: React.FC = () => {
+interface NavbarProps {
+  onCareerClick: () => void;
+}
+
+const Navbar: React.FC<NavbarProps> = ({ onCareerClick }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { t, i18n } = useTranslation();
@@ -43,10 +47,11 @@ const Navbar: React.FC = () => {
 
         {/* Desktop Menu */}
         <div className="desktop-menu" style={{ display: 'flex', gap: '20px', alignItems: 'center' }}>
-          <a href="#home" style={{ fontWeight: 600 }}>{t('nav.home')}</a>
-          <a href="#services" style={{ fontWeight: 600 }}>{t('nav.services')}</a>
-          <a href="#gallery" style={{ fontWeight: 600 }}>{t('nav.gallery')}</a>
-          <a href="#contact" style={{ fontWeight: 600 }}>{t('nav.contact')}</a>
+          <a href="#home" className="nav-link" style={{ fontWeight: 600 }}>{t('nav.home')}</a>
+          <a href="#services" className="nav-link" style={{ fontWeight: 600 }}>{t('nav.services')}</a>
+          <a href="#gallery" className="nav-link" style={{ fontWeight: 600 }}>{t('nav.gallery')}</a>
+          <button onClick={onCareerClick} className="nav-link" style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 0, fontWeight: 600 }}>Zaposlenje</button>
+          <a href="#contact" className="nav-link" style={{ fontWeight: 600 }}>{t('nav.contact')}</a>
           
           <div className="lang-switcher" style={{ display: 'flex', gap: '10px', marginLeft: '20px' }}>
             <button onClick={() => changeLanguage('bs')} style={langBtnStyle(i18n.language === 'bs')}>BS</button>
@@ -55,7 +60,7 @@ const Navbar: React.FC = () => {
             <button onClick={() => changeLanguage('en')} style={langBtnStyle(i18n.language === 'en')}>EN</button>
           </div>
 
-          <a href="https://www.facebook.com/kendicfenster/" target="_blank" rel="noopener noreferrer" style={{ marginLeft: '15px', color: '#fff', display: 'flex', alignItems: 'center' }}>
+          <a href="https://www.facebook.com/kendicfenster/" target="_blank" rel="noopener noreferrer" className="nav-link" style={{ marginLeft: '15px', display: 'flex', alignItems: 'center' }}>
             <Facebook size={20} />
           </a>
         </div>
@@ -79,26 +84,53 @@ const Navbar: React.FC = () => {
           flexDirection: 'column',
           gap: '15px'
         }}>
-          <a href="#home" onClick={() => setIsMenuOpen(false)}>{t('nav.home')}</a>
-          <a href="#services" onClick={() => setIsMenuOpen(false)}>{t('nav.services')}</a>
-          <a href="#gallery" onClick={() => setIsMenuOpen(false)}>{t('nav.gallery')}</a>
-          <a href="#contact" onClick={() => setIsMenuOpen(false)}>{t('nav.contact')}</a>
+          <a href="#home" onClick={() => setIsMenuOpen(false)} className="nav-link">{t('nav.home')}</a>
+          <a href="#services" onClick={() => setIsMenuOpen(false)} className="nav-link">{t('nav.services')}</a>
+          <a href="#gallery" onClick={() => setIsMenuOpen(false)} className="nav-link">{t('nav.gallery')}</a>
+          <button onClick={() => { onCareerClick(); setIsMenuOpen(false); }} className="nav-link">Zaposlenje</button>
+          <a href="#contact" onClick={() => setIsMenuOpen(false)} className="nav-link">{t('nav.contact')}</a>
           <div style={{ display: 'flex', gap: '10px', marginTop: '10px' }}>
             <button onClick={() => changeLanguage('bs')} style={langBtnStyle(i18n.language === 'bs')}>BS</button>
             <button onClick={() => changeLanguage('sl')} style={langBtnStyle(i18n.language === 'sl')}>SL</button>
             <button onClick={() => changeLanguage('de')} style={langBtnStyle(i18n.language === 'de')}>DE</button>
             <button onClick={() => changeLanguage('en')} style={langBtnStyle(i18n.language === 'en')}>EN</button>
           </div>
-          <a href="https://www.facebook.com/kendicfenster/" target="_blank" rel="noopener noreferrer" style={{ marginTop: '10px', color: '#fff', display: 'flex', alignItems: 'center', gap: '10px' }}>
+          <a href="https://www.facebook.com/kendicfenster/" target="_blank" rel="noopener noreferrer" className="nav-link" style={{ marginTop: '10px', display: 'flex', alignItems: 'center', gap: '10px' }}>
             <Facebook size={20} /> Facebook stranica
           </a>
         </div>
       )}
 
       <style>{`
+        .nav-link {
+          color: white;
+          text-decoration: none;
+          font-weight: 600; /* Base font weight */
+          transition: color 0.3s ease;
+          padding: 5px 0; /* Add some padding for better click area */
+          font-size: 1rem; /* Base font size */
+          font-family: inherit; /* Inherit font */
+        }
+        .nav-link:hover {
+          color: #e67e22;
+        }
+        /* Specific styles for button to look like link */
+        .nav-link.button-as-link {
+           background: none;
+           border: none;
+           cursor: pointer;
+           padding: 5px 0; /* Match padding of links */
+           text-align: left; /* Align text like a link */
+        }
+        .nav-link.button-as-link:hover {
+           color: #e67e22;
+        }
+
         @media (max-width: 992px) {
           .desktop-menu { display: none !important; }
           .mobile-toggle { display: block !important; cursor: pointer; }
+          /* Mobile menu styles */
+          .mobile-menu-item { /* Add styles if needed */ }
         }
       `}</style>
     </nav>

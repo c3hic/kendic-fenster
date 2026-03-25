@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import promoData from '../data/promo.json';
 import galleryData from '../data/gallery.json';
@@ -47,7 +47,7 @@ const Hero: React.FC = () => {
           <p style={{ fontSize: '1.2rem', marginBottom: '40px', maxWidth: '700px', margin: '0 auto 40px' }}>
             {t('hero.subtitle')}
           </p>
-          <div className="hero-buttons" style={{ display: 'flex', gap: '20px', justifyContent: 'center' }}>
+          <div className="hero-buttons" style={{ display: 'flex', gap: '20px', justifyContent: 'center', flexWrap: 'wrap' }}>
             <a href="#services" className="btn btn-primary">{t('hero.btnServices')}</a>
             <a href="#contact" className="btn" style={{ border: '2px solid white', color: 'white' }}>{t('hero.btnContact')}</a>
           </div>
@@ -119,8 +119,8 @@ const Hero: React.FC = () => {
         @media (max-width: 768px) {
           .hero-section { padding-top: 140px !important; padding-bottom: 40px !important; }
           h1 { font-size: 2.3rem !important; }
-          .hero-buttons { flex-direction: row !important; display: flex !important; gap: 10px !important; }
-          .hero-buttons .btn { padding: 10px 16px !important; font-size: 0.95rem !important; white-space: nowrap !important; }
+          .hero-buttons { gap: 10px !important; }
+          .hero-buttons .btn { padding: 12px 18px !important; font-size: 0.9rem !important; }
         }
       `}</style>
     </section>
