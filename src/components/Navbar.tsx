@@ -50,7 +50,7 @@ const Navbar: React.FC<NavbarProps> = ({ onCareerClick }) => {
           <a href="#home" className="nav-link" style={{ fontWeight: 600 }}>{t('nav.home')}</a>
           <a href="#services" className="nav-link" style={{ fontWeight: 600 }}>{t('nav.services')}</a>
           <a href="#gallery" className="nav-link" style={{ fontWeight: 600 }}>{t('nav.gallery')}</a>
-          <button onClick={onCareerClick} className="nav-link" style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 0, fontWeight: 600 }}>Zaposlenje</button>
+          <button onClick={onCareerClick} className="nav-link button-as-link">{t('nav.career')}</button>
           <a href="#contact" className="nav-link" style={{ fontWeight: 600 }}>{t('nav.contact')}</a>
           
           <div className="lang-switcher" style={{ display: 'flex', gap: '10px', marginLeft: '20px' }}>
@@ -87,7 +87,7 @@ const Navbar: React.FC<NavbarProps> = ({ onCareerClick }) => {
           <a href="#home" onClick={() => setIsMenuOpen(false)} className="nav-link">{t('nav.home')}</a>
           <a href="#services" onClick={() => setIsMenuOpen(false)} className="nav-link">{t('nav.services')}</a>
           <a href="#gallery" onClick={() => setIsMenuOpen(false)} className="nav-link">{t('nav.gallery')}</a>
-          <button onClick={() => { onCareerClick(); setIsMenuOpen(false); }} className="nav-link">Zaposlenje</button>
+          <button onClick={() => { onCareerClick(); setIsMenuOpen(false); }} className="nav-link button-as-link">{t('nav.career')}</button>
           <a href="#contact" onClick={() => setIsMenuOpen(false)} className="nav-link">{t('nav.contact')}</a>
           <div style={{ display: 'flex', gap: '10px', marginTop: '10px' }}>
             <button onClick={() => changeLanguage('bs')} style={langBtnStyle(i18n.language === 'bs')}>BS</button>

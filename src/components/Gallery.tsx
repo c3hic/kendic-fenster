@@ -150,7 +150,7 @@ const Gallery: React.FC = () => {
             }}
           >
             <ImageIcon size={20} />
-            Pogledaj sve radove ({allImages.length})
+            {t('gallery.viewAll')} ({allImages.length})
           </button>
         </div>
       )}

@@ -80,9 +80,8 @@ const Contact: React.FC = () => {
             <div style={{ display: 'flex', gap: '15px' }}>
               <Clock style={{ color: '#e67e22' }} />
               <div>
-                <strong>{t('contact.hours')}:</strong><br />
-                Pon - Pet: 08:00 - 16:00<br />
-                Subota i Nedjelja: Neradni
+                <strong>{t('contact.hoursLabel')}:</strong><br />
+                <span style={{ whiteSpace: 'pre-line' }}>{t('contact.hours')}</span>
               </div>
             </div>
           </div>

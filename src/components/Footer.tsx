@@ -51,19 +51,19 @@ const Footer: React.FC<FooterProps> = ({ onCareerClick }) => {
 
           {/* Kolona 2: Brzi Linkovi */}
           <div className="footer-col">
-            <h3 style={{ color: 'white', marginBottom: '20px', fontSize: '1.2rem' }}>Brzi Linkovi</h3>
+            <h3 style={{ color: 'white', marginBottom: '20px', fontSize: '1.2rem' }}>{t('footer.quickLinks')}</h3>
             <ul className="footer-links-list" style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '10px' }}>
               <li><a href="#home" className="footer-link">{t('nav.home')}</a></li>
               <li><a href="#services" className="footer-link">{t('nav.services')}</a></li>
               <li><a href="#gallery" className="footer-link">{t('nav.gallery')}</a></li>
               <li><a href="#contact" className="footer-link">{t('nav.contact')}</a></li>
-              <li><button onClick={onCareerClick} className="footer-link" style={{ background: 'transparent', border: 'none', cursor: 'pointer', fontSize: 'inherit', fontFamily: 'inherit', textAlign: 'left' }}>Postani dio tima</button></li>
+              <li><button onClick={onCareerClick} className="footer-link" style={{ background: 'transparent', border: 'none', cursor: 'pointer', fontSize: 'inherit', fontFamily: 'inherit', textAlign: 'left' }}>{t('footer.joinTeam')}</button></li>
             </ul>
           </div>
 
           {/* Kolona 3: Kontakt Info */}
           <div className="footer-col">
-            <h3 style={{ color: 'white', marginBottom: '20px', fontSize: '1.2rem' }}>Kontakt</h3>
+            <h3 style={{ color: 'white', marginBottom: '20px', fontSize: '1.2rem' }}>{t('footer.contactTitle')}</h3>
             <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '15px' }}>
               <li style={{ display: 'flex', gap: '10px', alignItems: 'flex-start' }}>
                 <MapPin size={18} color="#e67e22" style={{ marginTop: '3px' }} />
@@ -77,9 +77,9 @@ const Footer: React.FC<FooterProps> = ({ onCareerClick }) => {
                 <Mail size={18} color="#e67e22" />
                 <span>amir@kendic.ba</span>
               </li>
-              <li style={{ display: 'flex', gap: '10px', alignItems: 'flex-start' }}>
+              <li style={{ display: 'flex', gap: '10px', alignItems: 'flex-start', textAlign: 'left' }}>
                 <Clock size={18} color="#e67e22" style={{ marginTop: '3px' }} />
-                <span>Pon - Pet: 08:00 - 16:00<br/>Subota i Nedjelja: Neradni</span>
+                <span style={{ whiteSpace: 'pre-line' }}>{t('contact.hours')}</span>
               </li>
             </ul>
           </div>
