@@ -24,7 +24,9 @@ collections:
         name: "data"
         file: "src/data/gallery.json"
         fields:
-          - label: "Slike"
-            name: "images"
+          - label: "Projekti"
+            name: "projects"
             widget: "list"
-            field: {label: "Slika", name: "image", widget: "image"}
+            fields:
+              - {label: "Slika", name: "image", widget: "image"}
+              - {label: "Opis slike (SEO)", name: "alt", widget: "string", default: "KENDIĆ FENSTER - Rezanje i kantiranje iverice"}

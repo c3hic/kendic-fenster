@@ -59,8 +59,8 @@ const Gallery: React.FC = () => {
     }
   ];
 
-  const allImages = [...(galleryData.images || [])].reverse();
-  const displayedImages = allImages.slice(0, 6);
+  const allProjects = [...(galleryData.projects || [])].reverse();
+  const displayedProjects = allProjects.slice(0, 6);
 
   return (
     <section id="gallery" style={{ backgroundColor: '#fff' }}>
@@ -118,7 +118,7 @@ const Gallery: React.FC = () => {
         gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', 
         gap: '20px' 
       }}>
-        {displayedImages.map((img, i) => (
+        {displayedProjects.map((project, i) => (
           <div key={i} style={{ 
             height: '350px', 
             borderRadius: '10px',
@@ -131,15 +131,15 @@ const Gallery: React.FC = () => {
           onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
           >
             <img 
-              src={img} 
-              alt={`KENDIĆ FENSTER - Referenca rada ${i + 1} - Rezanje i kantiranje iverice`} 
+              src={project.image} 
+              alt={project.alt || `KENDIĆ FENSTER - Projekt ${i + 1}`} 
               style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
             />
           </div>
         ))}
       </div>
 
-      {allImages.length > 6 && (
+      {allProjects.length > 6 && (
         <div style={{ textAlign: 'center', marginTop: '40px' }}>
           <button 
             onClick={() => setIsModalOpen(true)}
@@ -154,7 +154,7 @@ const Gallery: React.FC = () => {
             }}
           >
             <ImageIcon size={20} />
-            {t('gallery.viewAll')} ({allImages.length})
+            {t('gallery.viewAll')} ({allProjects.length})
           </button>
         </div>
       )}
@@ -194,7 +194,7 @@ const Gallery: React.FC = () => {
               gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', 
               gap: '20px' 
             }}>
-              {allImages.map((img, i) => (
+              {allProjects.map((project, i) => (
                 <div key={i} style={{ 
                   height: '300px', 
                   borderRadius: '10px',
@@ -202,8 +202,8 @@ const Gallery: React.FC = () => {
                   boxShadow: '0 5px 15px rgba(255,255,255,0.1)'
                 }}>
                   <img 
-                    src={img} 
-                    alt={`KENDIĆ FENSTER - Projekt ${i + 1}`} 
+                    src={project.image} 
+                    alt={project.alt || `KENDIĆ FENSTER - Projekt ${i + 1}`} 
                     style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
                   />
                 </div>

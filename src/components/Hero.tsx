@@ -9,12 +9,12 @@ const Hero: React.FC = () => {
   const { t } = useTranslation();
 
   const heroBg = useMemo(() => {
-    const images = galleryData.images || [];
-    if (images.length === 0) return defaultBg;
+    const projects = galleryData.projects || [];
+    if (projects.length === 0) return defaultBg;
     const today = new Date();
     const dayIndex = today.getDate() + today.getMonth() * 31 + today.getFullYear();
-    const imageIndex = dayIndex % images.length;
-    return images[imageIndex];
+    const imageIndex = dayIndex % projects.length;
+    return projects[imageIndex].image;
   }, []);
 
   const hasPromoImage = promoData.image && promoData.image !== "";

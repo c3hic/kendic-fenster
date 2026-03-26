@@ -1,11 +1,32 @@
 {
-  "images": [
-    "/assets/projects/slika1.jpg",
-    "/assets/projects/slika 2.jpg",
-    "/assets/projects/slika3.jpg",
-    "/assets/projects/slika4.jpg",
-    "/assets/projects/slika5.jpg",
-    "/assets/projects/slika6.jpg",
-    "/assets/projects/slika7.jpg"
+  "projects": [
+    {
+      "image": "/assets/projects/slika1.jpg",
+      "alt": "KENDIĆ FENSTER - Rezanje i kantiranje iverice po mjeri"
+    },
+    {
+      "image": "/assets/projects/slika 2.jpg",
+      "alt": "KENDIĆ FENSTER - Kuhinjski elementi od iverice"
+    },
+    {
+      "image": "/assets/projects/slika3.jpg",
+      "alt": "KENDIĆ FENSTER - Opremanje interijera"
+    },
+    {
+      "image": "/assets/projects/slika4.jpg",
+      "alt": "KENDIĆ FENSTER - Kvalitetno kantiranje ABS"
+    },
+    {
+      "image": "/assets/projects/slika5.jpg",
+      "alt": "KENDIĆ FENSTER - Namještaj po mjeri Bosanska Krupa"
+    },
+    {
+      "image": "/assets/projects/slika6.jpg",
+      "alt": "KENDIĆ FENSTER - Širok asortiman okova"
+    },
+    {
+      "image": "/assets/projects/slika7.jpg",
+      "alt": "KENDIĆ FENSTER - Usluge rezanja iverice"
+    }
   ]
 }
