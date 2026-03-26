@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { useTranslation } from 'react-i18next';
 import { Loader2, X } from 'lucide-react';
 
 interface Props {
@@ -8,7 +7,6 @@ interface Props {
 }
 
 const JobApplication: React.FC<Props> = ({ isOpen, onClose }) => {
-  const { t } = useTranslation(); // Koristimo prevod za naslove, ali ovdje je jednostavnije direktno pisati tekst
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
   const [name, setName] = useState('');
 
