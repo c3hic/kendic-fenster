@@ -4,7 +4,7 @@ import { initReactI18next } from 'react-i18next';
 const resources = {
   bs: {
     translation: {
-      nav: { home: 'Početna', services: 'Usluge', gallery: 'Partneri', career: 'Zaposlenje', contact: 'Kontakt' },
+      nav: { home: 'Početna', services: 'Usluge', gallery: 'Partneri', career: 'Zaposlenje', contact: 'Kontakt', facebook: 'Facebook stranica' },
       hero: { title: 'Preciznost koja pravi razliku', subtitle: 'Vrhunska usluga rezanja i kantiranja iverice po mjeri, uz širok asortiman okova za vaš savršen enterijer.', btnServices: 'Naše Usluge', btnContact: 'Kontaktirajte Nas' },
       promo: { 
         tag: 'PROMO AKCIJA',
@@ -52,7 +52,7 @@ const resources = {
   },
   sl: {
     translation: {
-      nav: { home: 'Domov', services: 'Storitve', gallery: 'Partnerji', career: 'Zaposlitev', contact: 'Kontakt' },
+      nav: { home: 'Domov', services: 'Storitve', gallery: 'Partnerji', career: 'Zaposlitev', contact: 'Kontakt', facebook: 'Facebook stran' },
       hero: { title: 'Natančnost, ki naredi razliko', subtitle: 'Vrhunska storitev razreza in robljenja ivernih plošč po meri, s široko ponudbo okovja za vaš popoln interier.', btnServices: 'Naše Storitve', btnContact: 'Kontaktirajte Nas' },
       promo: { 
         tag: 'PROMO PONUDBA',
@@ -100,8 +100,8 @@ const resources = {
   },
   de: {
     translation: {
-      nav: { home: 'Startseite', services: 'Leistungen', gallery: 'Partner', career: 'Karriere', contact: 'Kontakt' },
-      hero: { title: 'Präzision, die den Unterschied macht', subtitle: 'Erstklassiger Service für den Zuschnitt und die Bekantung von Spanplatten nach Maß, mit einer breiten Palette an Beschlägen für Ihr perfektes Interieur.', btnServices: 'Unsere Leistungen', btnContact: 'Kontaktieren Sie uns' },
+      nav: { home: 'Startseite', services: 'Leistungen', gallery: 'Partner', career: 'Karriere', contact: 'Kontakt', facebook: 'Facebook Seite' },
+      hero: { title: 'Präzision, die den Unterschied macht', subtitle: 'Erstklassiger Service für den Zuschnitt und die Bekantung von Spanplatten nach Maß, with einer breiten Palette an Beschlägen für Ihr perfektes Interieur.', btnServices: 'Unsere Leistungen', btnContact: 'Kontaktieren Sie uns' },
       promo: { 
         tag: 'PROMO ANGEBOT',
         title: 'PROMO WOCHE', 
@@ -148,7 +148,7 @@ const resources = {
   },
   en: {
     translation: {
-      nav: { home: 'Home', services: 'Services', gallery: 'Partners', career: 'Careers', contact: 'Contact' },
+      nav: { home: 'Home', services: 'Services', gallery: 'Partners', career: 'Careers', contact: 'Contact', facebook: 'Facebook page' },
       hero: { title: 'Precision That Makes a Difference', subtitle: 'Top-quality particle board cutting and edging service, with a wide range of fittings for your perfect interior.', btnServices: 'Our Services', btnContact: 'Contact Us' },
       promo: { 
         tag: 'PROMO OFFER',

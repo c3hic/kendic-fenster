@@ -96,7 +96,7 @@ const Navbar: React.FC<NavbarProps> = ({ onCareerClick }) => {
             <button onClick={() => changeLanguage('en')} style={langBtnStyle(i18n.language === 'en')}>EN</button>
           </div>
           <a href="https://www.facebook.com/kendicfenster/" target="_blank" rel="noopener noreferrer" className="nav-link" style={{ marginTop: '10px', display: 'flex', alignItems: 'center', gap: '10px' }}>
-            <Facebook size={20} /> Facebook stranica
+            <Facebook size={20} /> {t('nav.facebook')}
           </a>
         </div>
       )}
