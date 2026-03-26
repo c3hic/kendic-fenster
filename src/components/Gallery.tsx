@@ -122,16 +122,20 @@ const Gallery: React.FC = () => {
           <div key={i} style={{ 
             height: '350px', 
             borderRadius: '10px',
-            backgroundImage: `url("${img}")`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
+            overflow: 'hidden',
             boxShadow: '0 5px 15px rgba(0,0,0,0.1)',
             transition: 'transform 0.3s ease',
             cursor: 'pointer'
           }}
           onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.02)'}
           onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
-          ></div>
+          >
+            <img 
+              src={img} 
+              alt={`KENDIĆ FENSTER - Referenca rada ${i + 1} - Rezanje i kantiranje iverice`} 
+              style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
+            />
+          </div>
         ))}
       </div>
 
@@ -194,11 +198,15 @@ const Gallery: React.FC = () => {
                 <div key={i} style={{ 
                   height: '300px', 
                   borderRadius: '10px',
-                  backgroundImage: `url("${img}")`,
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center',
+                  overflow: 'hidden',
                   boxShadow: '0 5px 15px rgba(255,255,255,0.1)'
-                }}></div>
+                }}>
+                  <img 
+                    src={img} 
+                    alt={`KENDIĆ FENSTER - Projekt ${i + 1}`} 
+                    style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
+                  />
+                </div>
               ))}
             </div>
           </div>

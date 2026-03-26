@@ -83,10 +83,9 @@ const Hero: React.FC = () => {
               </div>            
             {hasPromoImage && (
               <div style={{ marginBottom: '15px', borderRadius: '10px', overflow: 'hidden', height: '120px' }}>
-                <img src={promoData.image} alt="Promo" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                <img src={promoData.image} alt="KENDIĆ FENSTER - Posebna Ponuda i Akcija" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               </div>
             )}
-
             <h3 style={{ 
               marginBottom: '15px', 
               fontSize: '1.2rem', 
