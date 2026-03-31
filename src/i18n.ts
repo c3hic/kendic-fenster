@@ -5,7 +5,7 @@ const resources = {
   bs: {
     translation: {
       nav: { home: 'Početna', services: 'Usluge', gallery: 'Partneri', career: 'Zaposlenje', contact: 'Kontakt', facebook: 'Facebook stranica' },
-      hero: { title: 'Preciznost koja pravi razliku', subtitle: 'Vrhunska usluga rezanja i kantiranja iverice po mjeri, uz širok asortiman okova za vaš savršen enterijer.', btnServices: 'Naše Usluge', btnContact: 'Kontaktirajte Nas' },
+      hero: { title: 'Obrada pločastih materijala i prodaja okova', subtitle: 'Vrhunska usluga rezanja i kantiranja iverice po mjeri, uz širok asortiman okova za vaš savršen enterijer.', btnServices: 'Naše Usluge', btnContact: 'Kontaktirajte Nas' },
       promo: { 
         tag: 'PROMO AKCIJA',
         title: 'PROMO SEDMICA', 
