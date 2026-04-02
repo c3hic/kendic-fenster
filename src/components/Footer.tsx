@@ -21,7 +21,7 @@ const Footer: React.FC<FooterProps> = ({ onCareerClick }) => {
           {/* Kolona 1: O Nama */}
           <div className="footer-col">
             <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '20px' }}>
-              <img src={logoImg} alt="Fenster Kendic Logo" style={{ height: '50px', borderRadius: '5px' }} />
+              <img src={logoImg} alt="KENDIĆ FENSTER doo logo - Namještaj po mjeri" style={{ height: '50px', borderRadius: '5px' }} />
               <div style={{ fontWeight: 800, fontSize: '1.2rem', letterSpacing: '1px', lineHeight: 1.2 }}>
                 KENDIĆ <span style={{ color: '#e67e22' }}>FENSTER</span>
               </div>

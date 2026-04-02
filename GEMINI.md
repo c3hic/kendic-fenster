@@ -26,6 +26,7 @@ Ovo je zvanična veb stranica za firmu **Kendic Fenster doo**, koja se bavi uslu
   - Radno vrijeme u footeru i kontaktu je formatirano u dva reda sa pravilnim poravnanjem.
   - Hero sekcija dugmad su optimizovana za mobilni prikaz.
 - **Performanse**: Uklonjeni neiskorišteni importi i varijable (TS6133) radi bržeg i čistijeg builda na Netlify-u.
+- **SEO/Favicon poboljšanja**: Implementirana podrška za `favicon.ico` i `favicon.png` za bolju vidljivost u Google pretrazi i ostalim servisima.
 
 ## Pokretanje i Build
 - **Razvojni mod**: `npm run dev` (pokreće lokalni server).
@@ -42,5 +43,4 @@ Ovo je zvanična veb stranica za firmu **Kendic Fenster doo**, koja se bavi uslu
 - **Dinamički Katalozi**: Interaktivni logotipi partnera vode na online kataloge (Egger, Kastamonu, GTV, Falco).
 - **Kontakt**: Jasno razdvajanje Kancelarije i Fabrike sa zasebnim brojevima i mapom.
 
----
 *Posljednji put ažurirano: 26. Mart 2026. (Projekat finalizovan)*

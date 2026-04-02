@@ -39,7 +39,7 @@ const Navbar: React.FC<NavbarProps> = ({ onCareerClick }) => {
     }}>
       <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-          <img src={logoImg} alt="Fenster Kendic Logo" style={{ height: '50px', borderRadius: '5px' }} />
+          <img src={logoImg} alt="KENDIĆ FENSTER doo logo - Rezanje i kantiranje iverice" style={{ height: '50px', borderRadius: '5px' }} />
           <div style={{ fontWeight: 800, fontSize: '1.2rem', letterSpacing: '1px', lineHeight: 1.2 }}>
             KENDIĆ <span style={{ color: '#e67e22' }}>FENSTER</span>
           </div>
