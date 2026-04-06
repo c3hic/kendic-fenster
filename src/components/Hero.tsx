@@ -11,10 +11,21 @@ const Hero: React.FC = () => {
   const heroBg = useMemo(() => {
     const projects = galleryData.projects || [];
     if (projects.length === 0) return defaultBg;
+    
+    // Generišemo index baziran na današnjem datumu (UTC da izbjegnemo probleme sa vremenskim zonama)
     const today = new Date();
-    const dayIndex = today.getDate() + today.getMonth() * 31 + today.getFullYear();
-    const imageIndex = dayIndex % projects.length;
-    return projects[imageIndex].image;
+    const dateString = `${today.getFullYear()}-${today.getMonth() + 1}-${today.getDate()}`;
+    // Jednostavan hash za rotaciju
+    let hash = 0;
+    for (let i = 0; i < dateString.length; i++) {
+      hash = ((hash << 5) - hash) + dateString.charCodeAt(i);
+      hash |= 0;
+    }
+    
+    const imageIndex = Math.abs(hash) % projects.length;
+    const path = projects[imageIndex].image;
+    // Ako putanja počinje sa /, smatramo je apsolutnom iz public foldera, inače je procesuiramo
+    return path.startsWith('/') ? encodeURI(path) : path;
   }, []);
 
   const hasPromoImage = promoData.image && promoData.image !== "";
@@ -25,7 +36,7 @@ const Hero: React.FC = () => {
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
-      backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(${heroBg})`,
+      backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("${heroBg}")`,
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       backgroundRepeat: 'no-repeat',
